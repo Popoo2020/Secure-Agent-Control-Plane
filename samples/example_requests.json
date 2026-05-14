@@ -1,0 +1,23 @@
+[
+  {
+    "user_id": "analyst-001",
+    "roles": ["security_analyst"],
+    "tool": "search_logs",
+    "action_type": "read",
+    "expected_decision": "ALLOW"
+  },
+  {
+    "user_id": "analyst-002",
+    "roles": ["security_analyst"],
+    "tool": "create_ticket",
+    "action_type": "write",
+    "expected_decision": "REQUIRE_APPROVAL"
+  },
+  {
+    "user_id": "viewer-001",
+    "roles": ["viewer"],
+    "tool": "close_incident",
+    "action_type": "write",
+    "expected_decision": "DENY"
+  }
+]
