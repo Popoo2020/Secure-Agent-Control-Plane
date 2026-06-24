@@ -32,7 +32,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest -q
+          pytest -q tests
 
       - name: Run Bandit SAST
         run: |
