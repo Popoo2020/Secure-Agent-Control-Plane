@@ -30,9 +30,13 @@ jobs:
         run: |
           ruff check src tests
 
-      - name: Run tests
+      - name: Run policy engine tests
         run: |
-          pytest -q tests
+          pytest -q tests/test_policy_engine.py
+
+      - name: Run audit tests
+        run: |
+          pytest -q tests/test_audit.py
 
       - name: Run Bandit SAST
         run: |
