@@ -1,0 +1,20 @@
+tools:
+  - name: read_incident
+    allowed_roles:
+      - security_analyst
+      - security_manager
+    action_type: read
+    requires_approval: false
+
+  - name: create_ticket
+    allowed_roles:
+      - security_analyst
+      - security_manager
+    action_type: write
+    requires_approval: true
+
+  - name: close_incident
+    allowed_roles:
+      - security_manager
+    action_type: write
+    requires_approval: true
